@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      DOZMI · The Revival Center — Spirit-filled worship in Mississauga, ON
+    </title>
+    <meta
+      name="description"
+      content="DOZMI The Revival Center is a spirit-filled, bible-believing church in Mississauga, Ontario. Join us Sundays at 6:30 PM or Wednesdays for prayer."
+    />
+    <link rel="icon" href="assets/img/dozmi-logo-favicon.jpg" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tw-config.js"></script>
+    <link rel="stylesheet" href="assets/css/regal.css" />
+  </head>
+  <body>
+    <!-- =========================================================
+       HEADER
+       ========================================================= -->
+    <header class="site-header">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between"
+      >
+        <a href="index.html">
+          <img
+            src="assets/img/dozmi-logo-light.png"
+            alt="DOZMI The Revival Center"
+            class="header-logo"
+          />
+        </a>
+
+        <nav class="desktop-nav flex items-center gap-10">
+          <a href="index.html" class="nav-link is-active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="ministries.html" class="nav-link">Ministries</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="sermons.html" class="nav-link">Sermons</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="give.html" class="btn-gold hidden sm:inline-flex">
+            <span class="material-symbols-outlined text-base"
+              >volunteer_activism</span
+            >
+            Give
+          </a>
+          <button
+            class="mobile-toggle w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-on-primary"
+            data-mobile-toggle
+            aria-label="Open menu"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" data-mobile-menu>
+      <button class="mobile-close" data-mobile-close aria-label="Close menu">
+        <span class="material-symbols-outlined" style="font-size: 32px"
+          >close</span
+        >
+      </button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="events.html">Events</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="give.html">Give</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <!-- =========================================================
+         HERO with next-event bar at the base
+         ========================================================= -->
+      <section
+        class="hero-section relative min-h-screen flex items-center pt-32 pb-40 overflow-hidden"
+      >
+        <!-- Backdrop image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=2400&q=80"
+            alt="Interior of a sanctuary with sunlight streaming through stained glass"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 sanctuary-overlay"></div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(176,141,87,0.18),_transparent_45%)]"
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 w-full text-center fade-up"
+        >
+          <div class="eyebrow text-secondary-container justify-center">
+            Welcome to DOZMI
+          </div>
+          <h1
+            class="font-headline text-5xl md:text-7xl xl:text-[6.5rem] leading-[0.98] font-black text-on-primary mt-8 text-shadow-regal uppercase"
+          >
+            Experience <br />
+            <span
+              class="italic font-body font-normal capitalize text-secondary-container"
+              >Divine
+            </span>
+            revival.
+          </h1>
+          <p
+            class="mt-10 max-w-2xl mx-auto text-lg md:text-xl italic text-on-primary/80 leading-relaxed"
+          >
+            A spirit-filled, bible-believing community in Mississauga — standing
+            on the power of God to heal, deliver and restore. All are welcome to
+            experience His transformative love.
+          </p>
+
+          <div class="mt-10 flex flex-wrap justify-center gap-5">
+            <a
+              href="contact.html?subject=get%20to%20know%20the%20church"
+              class="btn-regal"
+            >
+              Plan Your Visit
+              <span class="material-symbols-outlined text-base"
+                >arrow_forward</span
+              >
+            </a>
+            <a href="sermons.html" class="btn-ghost-light">
+              <span class="material-symbols-outlined text-base"
+                >play_circle</span
+              >
+              Watch Latest Sermon
+            </a>
+          </div>
+        </div>
+
+        <!-- Next-event bar — pinned to the base of the hero section -->
+        <div class="hero-event-bar" data-next-event>
+          <!-- Injected by site.js at runtime -->
+        </div>
+      </section>
+
+      <!-- =========================================================
+         NEW HERE / WELCOME
+         ========================================================= -->
+      <section class="py-28 bg-background relative overflow-hidden">
+        <div
+          class="absolute top-20 right-0 w-80 h-80 rounded-full bg-secondary/10 blur-3xl -z-0"
+        ></div>
+        <div
+          class="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-12 gap-10 relative z-10"
+        >
+          <div class="md:col-span-7">
+            <div class="eyebrow">Deliverers of Zion</div>
+            <h2 class="section-title text-4xl md:text-6xl mt-6">
+              New here? <br />
+              <span
+                class="italic font-body font-normal lowercase text-secondary"
+                >welcome home.</span
+              >
+            </h2>
+            <div class="divider-gold mt-8"></div>
+            <p
+              class="text-on-surface-variant text-lg leading-relaxed mt-8 max-w-2xl font-body italic"
+            >
+              At the Revival Center, we are a diverse, bible-believing community
+              that stands firm in the power of God to heal and restore. All are
+              welcome here to experience His transformative love and grow in
+              faith, hope and purpose.
+            </p>
+            <p
+              class="text-on-surface-variant text-base leading-relaxed mt-4 max-w-2xl"
+            >
+              Our vision is to deliver people and raise deliverers — equipping a
+              generation that carries the fire of God and impacts families,
+              communities and nations for His glory.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-5">
+              <a
+                href="contact.html?subject=get%20to%20know%20the%20church"
+                class="btn-regal"
+              >
+                I'm New Here
+                <span class="material-symbols-outlined text-base"
+                  >arrow_forward</span
+                >
+              </a>
+              <a
+                href="contact.html?subject=Prayer%20%26%20Counselling"
+                class="btn-ghost"
+              >
+                Request Prayer
+              </a>
+            </div>
+          </div>
+
+          <!-- Pastor card -->
+          <div class="md:col-span-5">
+            <div class="relative">
+              <div
+                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-regal border-[10px] border-white"
+              >
+                <img
+                  src="assets/img/Rev_Sanmi_adetukasi.jpg"
+                  alt="Pastor Sanmi Adetukasi"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="absolute -bottom-8 -left-6 bg-primary text-on-primary p-7 rounded-2xl shadow-regal max-w-[260px]"
+              >
+                <div
+                  class="eyebrow text-secondary-container"
+                  style="font-size: 9px"
+                >
+                  Senior Pastor
+                </div>
+                <div class="font-headline text-2xl mt-2 font-black uppercase">
+                  Sanmi <br />Adetukasi
+                </div>
+                <p
+                  class="text-on-primary/70 italic text-xs mt-3 leading-relaxed"
+                >
+                  "We're overjoyed to have you join our church family. Welcome
+                  home."
+                </p>
+                <a
+                  href="mailto:revsanmi@gmail.com"
+                  class="mt-4 inline-flex items-center gap-2 text-secondary-container font-label font-bold text-[10px] uppercase tracking-widest hover:text-secondary-fixed transition-colors"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  Email Pastor
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         FEATURED SERMON
+         ========================================================= -->
+      <section class="py-32 relative overflow-hidden bg-surface-highest">
+        <div
+          class="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none"
+        >
+          <div
+            class="absolute top-10 right-10 w-96 h-96 rounded-full bg-primary blur-3xl"
+          ></div>
+        </div>
+        <div
+          class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-16 items-center relative z-10"
+          data-latest-sermon
+        >
+          <a href="https://www.youtube.com/watch?v=pB2wrJfWd90" target="_blank" rel="noopener" class="relative group cursor-pointer block" data-sermon-link>
+            <div
+              class="absolute -inset-4 bg-secondary/20 rounded-3xl rotate-2 transition-transform duration-500 group-hover:rotate-0"
+            ></div>
+            <div
+              class="relative aspect-video rounded-2xl overflow-hidden shadow-regal"
+            >
+              <img
+                src="https://img.youtube.com/vi/pB2wrJfWd90/maxresdefault.jpg"
+                alt="Easter Sunday — DOZMI The Revival Center"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-black/40 flex items-center justify-center"
+              >
+                <div
+                  class="w-24 h-24 velvet-gradient rounded-full flex items-center justify-center text-secondary-container shadow-2xl group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-5xl ml-1"
+                    >play_arrow</span
+                  >
+                </div>
+              </div>
+            </div>
+          </a>
+          <div>
+            <div class="eyebrow">Latest Sermon</div>
+            <h2 class="section-title text-4xl md:text-5xl mt-6" data-sermon-title>Easter Sunday</h2>
+            <p
+              class="text-on-surface-variant text-lg leading-relaxed mt-8 italic"
+            >
+              Immerse yourself in our latest spiritual transmission. Divine
+              wisdom for the modern soul — from DOZMI The Revival Center.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-x-10 gap-y-4 items-center">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary"
+                  >calendar_month</span
+                >
+                <span class="text-on-surface-variant text-sm" data-sermon-date>Last Sunday</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary"
+                  >person</span
+                >
+                <span class="text-on-surface-variant text-sm" data-sermon-speaker
+                  >DOZMI The Revival Centre</span
+                >
+              </div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=pB2wrJfWd90" target="_blank" rel="noopener" class="btn-regal mt-10" data-sermon-watch>
+              Watch Now
+              <span class="material-symbols-outlined text-base"
+                >play_circle</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         MINISTRIES OVERVIEW
+         ========================================================= -->
+      <section class="py-32 bg-background">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="text-center mb-20">
+            <div class="eyebrow justify-center">Our Ministries</div>
+            <h2 class="section-title text-5xl md:text-6xl mt-6">
+              Where You Can
+              <span
+                class="italic font-body font-normal lowercase text-secondary"
+                >serve</span
+              >
+            </h2>
+            <div class="divider-gold mx-auto mt-8"></div>
+            <p
+              class="text-on-surface-variant max-w-2xl mx-auto mt-8 italic leading-relaxed"
+            >
+              God has called us to serve Him through various ministries that
+              touch lives and build community. Discover where you can get
+              involved and make a difference.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="ministries.html#kids-church" class="ministry-tile">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80"
+                alt="Children in class"
+              />
+              <div class="veil"></div>
+              <div class="caption">
+                <div
+                  class="eyebrow text-secondary-container"
+                  style="font-size: 9px"
+                >
+                  For Ages 3–12
+                </div>
+                <h3 class="mt-2">Kids Church</h3>
+                <p>
+                  Raising godly champions through interactive worship, the Word
+                  and creative activities every Sunday.
+                </p>
+              </div>
+            </a>
+            <a
+              href="ministries.html#life-groups"
+              class="ministry-tile md:mt-12"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+                alt="Small group fellowship"
+              />
+              <div class="veil"></div>
+              <div class="caption">
+                <div
+                  class="eyebrow text-secondary-container"
+                  style="font-size: 9px"
+                >
+                  Community
+                </div>
+                <h3 class="mt-2">Life Groups</h3>
+                <p>
+                  Doing life together through small gatherings across the
+                  Greater Toronto Area — prayer, study, fellowship.
+                </p>
+              </div>
+            </a>
+            <a href="ministries.html#prayer-ministries" class="ministry-tile">
+              <img
+                src="assets/img/prayer.jpg"
+                alt="People praying"
+              />
+              <div class="veil"></div>
+              <div class="caption">
+                <div
+                  class="eyebrow text-secondary-container"
+                  style="font-size: 9px"
+                >
+                  Intercession
+                </div>
+                <h3 class="mt-2">Prayer Ministry</h3>
+                <p>
+                  Prayer Storm, Daily Prayer Call and Mothers' Prayer Summit —
+                  igniting a lifestyle of intercession.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="text-center mt-14">
+            <a href="ministries.html" class="btn-ghost">
+              Explore All Ministries
+              <span class="material-symbols-outlined text-base"
+                >arrow_right_alt</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         UPCOMING EVENTS GRID
+         ========================================================= -->
+      <section class="py-32 bg-surface-low">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="flex flex-wrap items-end justify-between mb-16 gap-8">
+            <div>
+              <div class="eyebrow">Heavenly Encounters</div>
+              <h2 class="section-title text-5xl md:text-6xl mt-6">
+                Upcoming
+                <span
+                  class="italic font-body font-normal lowercase text-secondary"
+                  >gatherings</span
+                >
+              </h2>
+              <div class="divider-gold mt-8"></div>
+            </div>
+            <a
+              href="events.html"
+              class="inline-flex items-center gap-3 text-secondary font-label font-bold uppercase tracking-[0.25em] text-[11px] border-b-2 border-secondary/40 hover:border-secondary pb-1 transition-all"
+            >
+              View Full Calendar
+              <span class="material-symbols-outlined text-base"
+                >calendar_today</span
+              >
+            </a>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-10"
+            data-upcoming-events="3"
+          ></div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         GIVE CTA
+         ========================================================= -->
+      <section class="py-32 bg-background relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+          <div
+            class="velvet-gradient rounded-[2.5rem] p-12 md:p-20 relative overflow-hidden shadow-regal"
+          >
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+              <svg
+                class="w-full h-full"
+                preserveAspectRatio="none"
+                viewBox="0 0 100 100"
+              >
+                <path
+                  d="M0,100 C30,40 70,40 100,100"
+                  fill="transparent"
+                  stroke="white"
+                  stroke-width="0.4"
+                />
+                <path
+                  d="M0,90 C30,30 70,30 100,90"
+                  fill="transparent"
+                  stroke="white"
+                  stroke-width="0.4"
+                />
+                <path
+                  d="M0,80 C30,20 70,20 100,80"
+                  fill="transparent"
+                  stroke="white"
+                  stroke-width="0.4"
+                />
+              </svg>
+            </div>
+            <div class="relative z-10 text-center">
+              <div class="eyebrow justify-center text-secondary-container">
+                He is faithful
+              </div>
+              <h2
+                class="font-headline text-4xl md:text-6xl text-on-primary mt-6 font-black uppercase tracking-tight"
+              >
+                Support the
+                <span
+                  class="italic font-body font-normal lowercase text-secondary-container"
+                  >mission</span
+                >
+              </h2>
+              <p
+                class="mt-8 text-on-primary/80 text-lg max-w-xl mx-auto italic leading-relaxed"
+              >
+                Your generosity helps us continue providing spiritual guidance
+                and community support programs across the region. DOZMI is a
+                charitable organisation — gifts are eligible for tax deduction.
+              </p>
+              <div class="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+                <a href="give.html" class="btn-gold">
+                  <span class="material-symbols-outlined text-base"
+                    >volunteer_activism</span
+                  >
+                  Give Online
+                </a>
+                <a href="contact.html" class="btn-ghost-light"> Contact Us </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+    <footer class="site-footer px-6 lg:px-10 pt-24 pb-10">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="space-y-6">
+          <a href="index.html">
+            <img
+              src="assets/img/dozmi-logo-light.png"
+              alt="DOZMI The Revival Center"
+              class="h-14 w-auto"
+            />
+          </a>
+          <p class="text-sm italic leading-relaxed max-w-xs">
+            Awakening hearts and restoring sacred purpose through the power of
+            the gospel and authentic community in Mississauga, Ontario.
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="https://www.facebook.com/dozmica"
+              class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"
+              aria-label="Facebook"
+            >
+              <span class="material-symbols-outlined text-lg">public</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@dozmitherevivalcenter"
+              class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"
+              aria-label="YouTube"
+            >
+              <span class="material-symbols-outlined text-lg">play_circle</span>
+            </a>
+            <a
+              href="https://www.instagram.com/dozmi.therevivalcenter/"
+              class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"
+              aria-label="Instagram"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >photo_camera</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow text-secondary-container" style="font-size: 9px">
+            Sanctuary
+          </div>
+          <ul class="mt-6 space-y-4 text-sm italic">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Our Ministries</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="sermons.html">Sermon Library</a></li>
+            <li><a href="give.html">Sacred Giving</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="eyebrow text-secondary-container" style="font-size: 9px">
+            Contact
+          </div>
+          <ul class="mt-6 space-y-4 text-sm italic">
+            <li>
+              1560 Dundas St. W<br />Mississauga, ON L5C 1E5<br /><span
+                class="text-on-primary/40"
+                >(Erindale Presbyterian Church Building)</span
+              >
+            </li>
+            <li><a href="tel:+16475206905">+1 (647) 520-6905</a></li>
+            <li>
+              <a href="mailto:info@dozmi-revivalcenter.ca"
+                >info@dozmi-revivalcenter.ca</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="eyebrow text-secondary-container" style="font-size: 9px">
+            Service Times
+          </div>
+          <ul class="mt-6 space-y-4 text-sm italic">
+            <li>
+              <strong
+                class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest"
+                >Sunday</strong
+              ><br />Worship — 6:30 PM
+            </li>
+            <li>
+              <strong
+                class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest"
+                >Wednesday</strong
+              ><br />Prayer — 6:30 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto mt-20 pt-10 border-t border-secondary/15 text-center"
+      >
+        <p class="text-[10px] uppercase tracking-[0.35em] text-on-primary/40">
+          © <span data-year></span> DOZMI The Revival Center · Sanctified Space
+          · All rights reserved.
+        </p>
+        <p class="mt-4 text-[9px] tracking-[0.2em] text-on-primary/30">
+          Designed by
+          <a
+            href="https://www.orbanforest.ca/"
+            class="hover:text-secondary-container transition-colors"
+            >Orban Forest Inc.</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/events-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/latest-sermon.js"></script>
+  </body>
+</html>

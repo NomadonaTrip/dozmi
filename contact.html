@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · DOZMI The Revival Center</title>
+  <meta name="description" content="Reach out to DOZMI The Revival Center. Visit us at 1560 Dundas St W, Mississauga, ON, or send us a message." />
+  <link rel="icon" href="assets/img/dozmi-logo-favicon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/regal.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <a href="index.html">
+        <img src="assets/img/dozmi-logo-light.png" alt="DOZMI The Revival Center" class="header-logo" />
+      </a>
+      <nav class="desktop-nav flex items-center gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ministries.html" class="nav-link">Ministries</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="sermons.html" class="nav-link">Sermons</a>
+        <a href="contact.html" class="nav-link is-active">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="give.html" class="btn-gold hidden sm:inline-flex"><span class="material-symbols-outlined text-base">volunteer_activism</span>Give</a>
+        <button class="mobile-toggle w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-on-primary" data-mobile-toggle><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <button class="mobile-close" data-mobile-close><span class="material-symbols-outlined" style="font-size: 32px;">close</span></button>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="ministries.html">Ministries</a><a href="events.html">Events</a><a href="sermons.html">Sermons</a><a href="give.html">Give</a><a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="relative min-h-[55vh] flex items-center pt-32 pb-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=2400&q=80" alt="Cathedral interior" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 sanctuary-overlay"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-on-primary">
+        <div class="eyebrow text-secondary-container">Reach Out</div>
+        <h1 class="font-headline text-5xl md:text-7xl font-black mt-6 uppercase leading-[1]">
+          A sanctuary <br/>
+          <span class="italic font-body font-normal lowercase text-secondary-container">for the soul</span>
+        </h1>
+        <p class="mt-8 max-w-2xl text-on-primary/80 italic text-lg leading-relaxed">
+          Whether you're seeking prayer, looking for a spiritual home, or have questions about
+          our ministry, our doors and hearts are open to you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Form + contact details -->
+    <section class="py-24 bg-background">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-12">
+
+        <!-- Form card -->
+        <div class="md:col-span-7">
+          <div class="bg-surface-variant rounded-3xl p-10 md:p-12 border border-outline-variant/30 shadow-sanctuary">
+            <div class="eyebrow">Send a Message</div>
+            <h2 class="section-title text-3xl md:text-4xl mt-6">We'd love to <span class="italic font-body font-normal lowercase text-secondary">hear from you</span></h2>
+
+            <form class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6" onsubmit="event.preventDefault(); alert('Thank you — your message has been received. We will respond shortly.');">
+              <label class="block md:col-span-1">
+                <span class="eyebrow">Your Name</span>
+                <input type="text" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="First &amp; Last" />
+              </label>
+              <label class="block md:col-span-1">
+                <span class="eyebrow">Email</span>
+                <input type="email" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="your@email.com" />
+              </label>
+              <label class="block md:col-span-1">
+                <span class="eyebrow">Phone</span>
+                <input type="tel" class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="+1 (___) ___-____" />
+              </label>
+              <label class="block md:col-span-1">
+                <span class="eyebrow">I'm New</span>
+                <select class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors">
+                  <option>Yes, first time</option>
+                  <option>No, I've been before</option>
+                </select>
+              </label>
+              <label class="block md:col-span-2">
+                <span class="eyebrow">I Want To...</span>
+                <select class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors">
+                  <option>Select one...</option>
+                  <option>Know more about the revival center</option>
+                  <option>Be prayed for &amp; counselled with</option>
+                  <option>Volunteer for Kids Church</option>
+                  <option>Volunteer for a missions program</option>
+                  <option>Start a life group</option>
+                  <option>Join a life group</option>
+                  <option>Attend the Mothers' Prayer Summit</option>
+                  <option>Make a donation</option>
+                </select>
+              </label>
+              <label class="block md:col-span-2">
+                <span class="eyebrow">Message</span>
+                <textarea rows="5" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Share what's on your heart..."></textarea>
+              </label>
+              <div class="md:col-span-2">
+                <button type="submit" class="btn-regal">
+                  Send Message
+                  <span class="material-symbols-outlined text-base">send</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact details -->
+        <div class="md:col-span-5 flex flex-col gap-6">
+          <div>
+            <div class="eyebrow">Get In Touch</div>
+            <h2 class="section-title text-3xl md:text-4xl mt-6">Visit &amp; <span class="italic font-body font-normal lowercase text-secondary">connect</span></h2>
+            <div class="divider-gold mt-6"></div>
+          </div>
+
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary flex-shrink-0">
+              <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <div>
+              <div class="eyebrow" style="font-size: 9px;">Our Location</div>
+              <p class="font-headline font-black text-lg text-primary mt-2 uppercase">1560 Dundas St. W</p>
+              <p class="text-on-surface-variant italic text-sm">Mississauga, ON L5C 1E5<br/>(Erindale Presbyterian Church Building)</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary flex-shrink-0">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <div>
+              <div class="eyebrow" style="font-size: 9px;">Email Us</div>
+              <a href="mailto:info@dozmi-revivalcenter.ca" class="block text-primary font-headline font-bold mt-2">info@dozmi-revivalcenter.ca</a>
+              <a href="mailto:deliverersofzionministryint@gmail.com" class="block text-on-surface-variant italic text-sm break-all mt-1">deliverersofzionministryint@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary flex-shrink-0">
+              <span class="material-symbols-outlined">call</span>
+            </div>
+            <div>
+              <div class="eyebrow" style="font-size: 9px;">Phone</div>
+              <a href="tel:+16475206905" class="font-headline font-black text-primary text-lg mt-2 block">+1 (647) 520-6905</a>
+            </div>
+          </div>
+
+          <!-- Prayer Line callout -->
+          <div class="velvet-gradient rounded-3xl p-8 text-on-primary shadow-regal mt-4">
+            <div class="eyebrow text-secondary-container">Prayer Line</div>
+            <h3 class="font-headline text-2xl font-black mt-3 uppercase">Need prayer <span class="italic font-body font-normal lowercase text-secondary-container">right now?</span></h3>
+            <p class="italic text-on-primary/75 mt-3 text-sm leading-relaxed">
+              The effectual, fervent prayer of a righteous person availeth much. Call our prayer line and a team member will intercede with you.
+            </p>
+            <a href="tel:+16475206905" class="mt-5 inline-flex items-center gap-3 bg-secondary-container text-on-secondary font-label font-black text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-full hover:brightness-110 transition">
+              <span class="material-symbols-outlined text-base">call</span>
+              Call Prayer Line
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="py-16 bg-surface-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="rounded-3xl overflow-hidden shadow-regal border-[10px] border-white">
+          <iframe
+            src="https://maps.google.com/maps?q=1560+Dundas+St+W,+Mississauga,+ON+L5C+1E5&t=m&z=15&output=embed&iwloc=near"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="DOZMI The Revival Center location map"
+          ></iframe>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-4 mt-6 px-2">
+          <p class="text-on-surface-variant italic">1560 Dundas St. W, Mississauga, ON L5C 1E5</p>
+          <a href="https://maps.app.goo.gl/bRv3WKi5rcWWowUVA" class="inline-flex items-center gap-2 text-primary font-label font-bold uppercase tracking-[0.2em] text-[11px] hover:text-primary-container transition">
+            Get Directions <span class="material-symbols-outlined text-base">north_east</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay connected -->
+    <section class="py-24 bg-background">
+      <div class="max-w-6xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="eyebrow">Stay Connected</div>
+          <h2 class="section-title text-4xl md:text-5xl mt-6">Follow our <span class="italic font-body font-normal lowercase text-secondary">journey</span></h2>
+          <p class="text-on-surface-variant italic mt-6 leading-relaxed">
+            Follow us on social media and experience the DOZMI community through sermons,
+            testimonies, worship and the local gatherings that shape our community.
+          </p>
+          <div class="flex gap-4 mt-8">
+            <a href="https://www.facebook.com/dozmica" class="w-14 h-14 rounded-full velvet-gradient flex items-center justify-center text-secondary-container shadow-card hover:scale-110 transition"><span class="material-symbols-outlined">public</span></a>
+            <a href="https://www.youtube.com/@dozmitherevivalcenter" class="w-14 h-14 rounded-full velvet-gradient flex items-center justify-center text-secondary-container shadow-card hover:scale-110 transition"><span class="material-symbols-outlined">play_circle</span></a>
+            <a href="https://www.instagram.com/dozmi.therevivalcenter/" class="w-14 h-14 rounded-full velvet-gradient flex items-center justify-center text-secondary-container shadow-card hover:scale-110 transition"><span class="material-symbols-outlined">photo_camera</span></a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="Community"/></div>
+          <div class="aspect-square rounded-2xl overflow-hidden mt-10"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="Fellowship"/></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer px-6 lg:px-10 pt-24 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <a href="index.html">
+          <img src="assets/img/dozmi-logo-light.png" alt="DOZMI The Revival Center" class="h-14 w-auto" />
+        </a>
+        <p class="text-sm italic leading-relaxed max-w-xs">Awakening hearts and restoring sacred purpose through the power of the gospel and authentic community in Mississauga, Ontario.</p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/dozmica" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">public</span></a>
+          <a href="https://www.youtube.com/@dozmitherevivalcenter" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">play_circle</span></a>
+          <a href="https://www.instagram.com/dozmi.therevivalcenter/" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Sanctuary</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ministries.html">Our Ministries</a></li>
+          <li><a href="events.html">Events Calendar</a></li>
+          <li><a href="sermons.html">Sermon Library</a></li>
+          <li><a href="give.html">Sacred Giving</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Contact</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li>1560 Dundas St. W<br/>Mississauga, ON L5C 1E5<br/><span class="text-on-primary/40">(Erindale Presbyterian Church Building)</span></li>
+          <li><a href="tel:+16475206905">+1 (647) 520-6905</a></li>
+          <li><a href="mailto:info@dozmi-revivalcenter.ca">info@dozmi-revivalcenter.ca</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Service Times</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li><strong class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest">Sunday</strong><br/>Worship — 6:30 PM</li>
+          <li><strong class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest">Wednesday</strong><br/>Prayer — 6:30 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-secondary/15 text-center">
+      <p class="text-[10px] uppercase tracking-[0.35em] text-on-primary/40">© <span data-year></span> DOZMI The Revival Center · Sanctified Space · All rights reserved.</p>
+      <p class="mt-4 text-[9px] tracking-[0.2em] text-on-primary/30">Designed by <a href="https://www.orbanforest.ca/" class="hover:text-secondary-container transition-colors">Orban Forest Inc.</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

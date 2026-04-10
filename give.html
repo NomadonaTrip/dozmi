@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Give · DOZMI The Revival Center</title>
+  <meta name="description" content="Support the mission of DOZMI The Revival Center. Give via Stripe or Interac e-Transfer. Tax-deductible gifts welcomed." />
+  <link rel="icon" href="assets/img/dozmi-logo-favicon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/regal.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <a href="index.html">
+        <img src="assets/img/dozmi-logo-light.png" alt="DOZMI The Revival Center" class="header-logo" />
+      </a>
+      <nav class="desktop-nav flex items-center gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ministries.html" class="nav-link">Ministries</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="sermons.html" class="nav-link">Sermons</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="give.html" class="btn-gold hidden sm:inline-flex"><span class="material-symbols-outlined text-base">volunteer_activism</span>Give</a>
+        <button class="mobile-toggle w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-on-primary" data-mobile-toggle><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <button class="mobile-close" data-mobile-close><span class="material-symbols-outlined" style="font-size: 32px;">close</span></button>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="ministries.html">Ministries</a><a href="events.html">Events</a><a href="sermons.html">Sermons</a><a href="give.html">Give</a><a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="relative min-h-[55vh] flex items-center pt-32 pb-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2400&q=80" alt="Open hands offering" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 sanctuary-overlay"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-on-primary">
+        <div class="eyebrow text-secondary-container">He is Faithful</div>
+        <h1 class="font-headline text-5xl md:text-7xl font-black mt-6 uppercase leading-[1]">
+          Sacred <br/>
+          <span class="italic font-body font-normal lowercase text-secondary-container">generosity</span>
+        </h1>
+        <p class="mt-8 max-w-2xl text-on-primary/85 italic text-lg leading-relaxed">
+          "God so loved the world that He gave." It is a privilege to give back to God what He
+          has graciously given — and we commit to being good stewards of your generosity.
+        </p>
+      </div>
+    </section>
+
+    <!-- Note about giving -->
+    <section class="py-20 bg-background">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="eyebrow justify-center">A Note About Giving</div>
+        <h2 class="section-title text-3xl md:text-4xl mt-6">Tax-deductible. <span class="italic font-body font-normal lowercase text-secondary">kingdom-building.</span></h2>
+        <p class="text-on-surface-variant italic mt-8 leading-relaxed max-w-2xl mx-auto">
+          DOZMI — The Revival Center is a registered charitable organisation in Canada. Gifts
+          and donations are eligible for a tax deduction. Thank you for building with us.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ways to give -->
+    <section class="py-20 bg-surface-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center mb-16">
+          <div class="eyebrow justify-center">Ways to Support</div>
+          <h2 class="section-title text-5xl md:text-6xl mt-6">Give <span class="italic font-body font-normal lowercase text-secondary">securely</span></h2>
+          <div class="divider-gold mx-auto mt-8"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+          <!-- Stripe -->
+          <div class="bg-background rounded-3xl p-10 border border-outline-variant/40 shadow-sanctuary relative overflow-hidden group hover:shadow-regal transition-all">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="w-16 h-16 rounded-2xl velvet-gradient flex items-center justify-center text-secondary-container shadow-regal mb-6">
+              <span class="material-symbols-outlined text-3xl">credit_card</span>
+            </div>
+            <div class="eyebrow">Credit / Debit</div>
+            <h3 class="font-headline text-3xl font-black text-primary mt-4 uppercase">Stripe</h3>
+            <p class="text-on-surface-variant italic mt-5 leading-relaxed">
+              Set up a one-time or recurring gift by card. Secure checkout hosted by Stripe —
+              no information is stored on our servers.
+            </p>
+            <ul class="mt-6 space-y-2 text-sm">
+              <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>One-time or recurring</li>
+              <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Visa, Mastercard, Amex</li>
+              <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Apple Pay &amp; Google Pay</li>
+            </ul>
+            <a href="#" class="btn-regal mt-8 w-full justify-center">
+              Give Via Stripe
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Interac -->
+          <div class="velvet-gradient rounded-3xl p-10 text-on-primary shadow-regal relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
+            <div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal mb-6">
+              <span class="material-symbols-outlined text-3xl">account_balance</span>
+            </div>
+            <div class="eyebrow text-secondary-container">For Canadian Banks</div>
+            <h3 class="font-headline text-3xl font-black mt-4 uppercase">Interac e-Transfer</h3>
+            <p class="italic mt-5 leading-relaxed text-on-primary/80">
+              Give securely through your online banking by making an Interac e-Transfer to:
+            </p>
+            <div class="mt-6 p-5 rounded-2xl bg-on-primary/10 backdrop-blur-sm border border-secondary/30 break-all">
+              <p class="text-xs font-label uppercase tracking-widest text-secondary-container mb-2">Email address</p>
+              <p class="font-headline text-lg font-bold">deliverersofzionministryint@gmail.com</p>
+            </div>
+            <p class="text-xs mt-4 text-on-primary/60 italic">No security question required — auto-deposit is enabled.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Where Your Seeds Are Sown -->
+    <section class="py-32 bg-background">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-16 items-center">
+        <div class="md:col-span-5">
+          <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-regal">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80" alt="Outreach impact" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+            <div class="absolute bottom-8 left-8 right-8 text-on-primary">
+              <div class="font-headline text-6xl font-black text-secondary-container">100%</div>
+              <p class="text-sm italic mt-2">of gifts go directly to ministry and outreach programs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <div class="eyebrow">Impact</div>
+          <h2 class="section-title text-4xl md:text-5xl mt-6">Where your seeds <span class="italic font-body font-normal lowercase text-secondary">are sown</span></h2>
+          <div class="divider-gold mt-8"></div>
+
+          <div class="mt-10 space-y-6">
+            <div class="flex gap-5">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary flex-shrink-0">
+                <span class="material-symbols-outlined">church</span>
+              </div>
+              <div>
+                <h4 class="font-headline font-black text-lg text-primary uppercase">Weekly Worship Services</h4>
+                <p class="text-on-surface-variant italic text-sm mt-1">Sanctuary operations, worship ministry and Sunday community events.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary flex-shrink-0">
+                <span class="material-symbols-outlined">public</span>
+              </div>
+              <div>
+                <h4 class="font-headline font-black text-lg text-primary uppercase">Global Mission Outreach</h4>
+                <p class="text-on-surface-variant italic text-sm mt-1">Crusades, church planting and feeding programs across Africa and North America.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary flex-shrink-0">
+                <span class="material-symbols-outlined">diversity_3</span>
+              </div>
+              <div>
+                <h4 class="font-headline font-black text-lg text-primary uppercase">Community &amp; Benevolence</h4>
+                <p class="text-on-surface-variant italic text-sm mt-1">Homeless outreach, Kids Church, Life Groups and local pastoral care.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accountability -->
+    <section class="py-24 bg-primary text-on-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center relative z-10">
+        <div class="eyebrow justify-center text-secondary-container">Financial Accountability</div>
+        <h2 class="font-headline text-4xl md:text-5xl font-black mt-6 uppercase">Good <span class="italic font-body font-normal lowercase text-secondary-container">stewards.</span></h2>
+        <p class="italic mt-6 max-w-2xl mx-auto text-on-primary/75 leading-relaxed">
+          We commit to transparency and integrity with every dollar you entrust to us.
+          Annual reports are available to members and donors upon request.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-14 text-left">
+          <div class="p-6 rounded-2xl bg-on-primary/5 border border-secondary/20"><div class="eyebrow text-secondary-container" style="font-size: 9px;">Registered</div><div class="font-headline text-xl font-black mt-3">Canadian Charity</div></div>
+          <div class="p-6 rounded-2xl bg-on-primary/5 border border-secondary/20"><div class="eyebrow text-secondary-container" style="font-size: 9px;">Audited</div><div class="font-headline text-xl font-black mt-3">Annually</div></div>
+          <div class="p-6 rounded-2xl bg-on-primary/5 border border-secondary/20"><div class="eyebrow text-secondary-container" style="font-size: 9px;">Tax Receipts</div><div class="font-headline text-xl font-black mt-3">Year-End</div></div>
+          <div class="p-6 rounded-2xl bg-on-primary/5 border border-secondary/20"><div class="eyebrow text-secondary-container" style="font-size: 9px;">Reports</div><div class="font-headline text-xl font-black mt-3">Transparent</div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer px-6 lg:px-10 pt-24 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <a href="index.html">
+          <img src="assets/img/dozmi-logo-light.png" alt="DOZMI The Revival Center" class="h-14 w-auto" />
+        </a>
+        <p class="text-sm italic leading-relaxed max-w-xs">Awakening hearts and restoring sacred purpose through the power of the gospel and authentic community in Mississauga, Ontario.</p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/dozmica" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">public</span></a>
+          <a href="https://www.youtube.com/@dozmitherevivalcenter" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">play_circle</span></a>
+          <a href="https://www.instagram.com/dozmi.therevivalcenter/" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Sanctuary</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ministries.html">Our Ministries</a></li>
+          <li><a href="events.html">Events Calendar</a></li>
+          <li><a href="sermons.html">Sermon Library</a></li>
+          <li><a href="give.html">Sacred Giving</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Contact</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li>1560 Dundas St. W<br/>Mississauga, ON L5C 1E5<br/><span class="text-on-primary/40">(Erindale Presbyterian Church Building)</span></li>
+          <li><a href="tel:+16475206905">+1 (647) 520-6905</a></li>
+          <li><a href="mailto:info@dozmi-revivalcenter.ca">info@dozmi-revivalcenter.ca</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Service Times</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li><strong class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest">Sunday</strong><br/>Worship — 6:30 PM</li>
+          <li><strong class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest">Wednesday</strong><br/>Prayer — 6:30 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-secondary/15 text-center">
+      <p class="text-[10px] uppercase tracking-[0.35em] text-on-primary/40">© <span data-year></span> DOZMI The Revival Center · Sanctified Space · All rights reserved.</p>
+      <p class="mt-4 text-[9px] tracking-[0.2em] text-on-primary/30">Designed by <a href="https://www.orbanforest.ca/" class="hover:text-secondary-container transition-colors">Orban Forest Inc.</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sermons · DOZMI The Revival Center</title>
+  <meta name="description" content="Watch the latest messages from Pastor Sanmi Adetukasi and the DOZMI Revival Center team." />
+  <link rel="icon" href="assets/img/dozmi-logo-favicon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/regal.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <a href="index.html">
+        <img src="assets/img/dozmi-logo-light.png" alt="DOZMI The Revival Center" class="header-logo" />
+      </a>
+      <nav class="desktop-nav flex items-center gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ministries.html" class="nav-link">Ministries</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="sermons.html" class="nav-link is-active">Sermons</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="give.html" class="btn-gold hidden sm:inline-flex"><span class="material-symbols-outlined text-base">volunteer_activism</span>Give</a>
+        <button class="mobile-toggle w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-on-primary" data-mobile-toggle><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <button class="mobile-close" data-mobile-close><span class="material-symbols-outlined" style="font-size: 32px;">close</span></button>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="ministries.html">Ministries</a><a href="events.html">Events</a><a href="sermons.html">Sermons</a><a href="give.html">Give</a><a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="relative pt-36 pb-16 overflow-hidden bg-primary">
+      <div class="absolute inset-0 opacity-15">
+        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=2400&q=80" class="w-full h-full object-cover" alt="" />
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-on-primary">
+        <div class="eyebrow text-secondary-container">Spiritual Library</div>
+        <h1 class="font-headline text-5xl md:text-7xl font-black mt-6 uppercase leading-[1]">
+          Sermon Archive <br/>
+          <span class="italic font-body font-normal lowercase text-secondary-container">&amp; eternal truths</span>
+        </h1>
+        <p class="mt-8 max-w-2xl text-on-primary/75 italic text-lg leading-relaxed">
+          Immerse yourself in our library of spirit-filled messages. Walking in the fullness
+          of the Spirit, week by week.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="py-24 bg-background">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-8 relative group">
+            <div class="aspect-video rounded-3xl overflow-hidden shadow-regal relative border-[10px] border-white">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/rLLBpBG74rY" title="DOZMI Revival Center · Latest Message" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="md:col-span-4">
+            <div class="eyebrow">Featured Message</div>
+            <h2 class="section-title text-3xl md:text-4xl mt-6">Walking in the <span class="italic font-body font-normal lowercase text-secondary">power of the spirit</span></h2>
+            <div class="divider-gold mt-6"></div>
+            <p class="text-on-surface-variant italic leading-relaxed mt-6">Our latest spiritual transmission — divine wisdom for the modern soul from Pastor Sanmi Adetukasi.</p>
+            <div class="mt-6 space-y-3 text-sm">
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">person</span><span class="text-on-surface-variant">Pastor Sanmi Adetukasi</span></div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">calendar_month</span><span class="text-on-surface-variant">Latest Sunday</span></div>
+              <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">schedule</span><span class="text-on-surface-variant">45 min</span></div>
+            </div>
+            <a href="https://www.youtube.com/@dozmitherevivalcenter" class="btn-regal mt-8">
+              Subscribe on YouTube
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter bar -->
+    <section class="py-10 bg-background border-t border-outline-variant/30">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center gap-4 justify-between">
+        <div class="eyebrow">Recent Messages</div>
+        <div class="flex flex-wrap gap-2 font-label text-[11px] font-bold uppercase tracking-[0.18em]">
+          <button class="px-5 py-2.5 rounded-full velvet-gradient text-secondary-container shadow-card">All</button>
+          <button class="px-5 py-2.5 rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary transition">Series</button>
+          <button class="px-5 py-2.5 rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary transition">Teaching</button>
+          <button class="px-5 py-2.5 rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary transition">Prayer</button>
+          <button class="px-5 py-2.5 rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary transition">Revival</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sermon grid -->
+    <section class="pb-32 bg-background">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Card -->
+        <article class="event-card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal">
+                <span class="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-7">
+            <div class="eyebrow" style="font-size: 9px;">Series · The Awakening</div>
+            <h3 class="font-headline text-xl font-black mt-4 text-primary uppercase">Breaking the Silence</h3>
+            <p class="text-on-surface-variant italic mt-3 text-sm">Exploring the prophetic voice and how to discern what God is saying in this season.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">person</span> Pastor Sanmi</div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal">
+                <span class="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-7">
+            <div class="eyebrow" style="font-size: 9px;">Teaching</div>
+            <h3 class="font-headline text-xl font-black mt-4 text-primary uppercase">Sovereign Grace</h3>
+            <p class="text-on-surface-variant italic mt-3 text-sm">A reminder that salvation is by grace through faith — not by works, lest any should boast.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">person</span> Guest Speaker</div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal">
+                <span class="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-7">
+            <div class="eyebrow" style="font-size: 9px;">Revival</div>
+            <h3 class="font-headline text-xl font-black mt-4 text-primary uppercase">The Power of Stillness</h3>
+            <p class="text-on-surface-variant italic mt-3 text-sm">Learning to be still and know that He is God — in a culture that glorifies noise.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">person</span> Pastor Sanmi</div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1498936178812-4b2e558d2937?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal">
+                <span class="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-7">
+            <div class="eyebrow" style="font-size: 9px;">Prayer</div>
+            <h3 class="font-headline text-xl font-black mt-4 text-primary uppercase">When Heaven Opens</h3>
+            <p class="text-on-surface-variant italic mt-3 text-sm">The lifestyle of the person of prayer — and what it means to be heard in the heavens.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">person</span> Evangelist Diego</div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1507409613952-518459ac866e?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal">
+                <span class="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-7">
+            <div class="eyebrow" style="font-size: 9px;">Teaching</div>
+            <h3 class="font-headline text-xl font-black mt-4 text-primary uppercase">Identity in Christ</h3>
+            <p class="text-on-surface-variant italic mt-3 text-sm">Who you are in Him — and how that changes everything about how you live.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">person</span> Pastor Sanmi</div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shadow-regal">
+                <span class="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-7">
+            <div class="eyebrow" style="font-size: 9px;">Series · The Awakening</div>
+            <h3 class="font-headline text-xl font-black mt-4 text-primary uppercase">Divine Purpose</h3>
+            <p class="text-on-surface-variant italic mt-3 text-sm">Discovering why you were made — and how to walk in the calling God placed on your life.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">person</span> Pastor Sanmi</div>
+          </div>
+        </article>
+
+      </div>
+      <div class="text-center mt-16">
+        <a href="https://www.youtube.com/@dozmitherevivalcenter" class="btn-ghost">Load More Messages</a>
+      </div>
+    </section>
+
+    <!-- Never miss CTA -->
+    <section class="py-24 bg-primary relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-on-primary">
+          <div class="eyebrow text-secondary-container">Never Miss a Message</div>
+          <h2 class="font-headline text-4xl md:text-5xl font-black mt-6 uppercase">Subscribe &amp; <span class="italic font-body font-normal lowercase text-secondary-container">stay ready</span></h2>
+          <p class="text-on-primary/70 italic mt-6 leading-relaxed">Get fresh sermons, devotionals and prayer points delivered to your inbox.</p>
+          <form class="mt-8 flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="your@email.com" class="flex-1 px-6 py-4 rounded-full bg-on-primary/10 border border-secondary/30 text-on-primary placeholder:text-on-primary/40 focus:outline-none focus:border-secondary-container" />
+            <button type="button" class="btn-gold">Subscribe</button>
+          </form>
+        </div>
+        <div class="hidden md:flex justify-end">
+          <div class="aspect-square w-80 rounded-3xl overflow-hidden shadow-regal border-[10px] border-on-primary/10 rotate-3">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=900&q=80" alt="Bible and coffee" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer px-6 lg:px-10 pt-24 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <a href="index.html">
+          <img src="assets/img/dozmi-logo-light.png" alt="DOZMI The Revival Center" class="h-14 w-auto" />
+        </a>
+        <p class="text-sm italic leading-relaxed max-w-xs">Awakening hearts and restoring sacred purpose through the power of the gospel and authentic community in Mississauga, Ontario.</p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/dozmica" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">public</span></a>
+          <a href="https://www.youtube.com/@dozmitherevivalcenter" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">play_circle</span></a>
+          <a href="https://www.instagram.com/dozmi.therevivalcenter/" class="w-11 h-11 rounded-full border border-secondary/30 flex items-center justify-center text-secondary-container hover:bg-secondary hover:text-on-secondary transition-all"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Sanctuary</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ministries.html">Our Ministries</a></li>
+          <li><a href="events.html">Events Calendar</a></li>
+          <li><a href="sermons.html">Sermon Library</a></li>
+          <li><a href="give.html">Sacred Giving</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Contact</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li>1560 Dundas St. W<br/>Mississauga, ON L5C 1E5<br/><span class="text-on-primary/40">(Erindale Presbyterian Church Building)</span></li>
+          <li><a href="tel:+16475206905">+1 (647) 520-6905</a></li>
+          <li><a href="mailto:info@dozmi-revivalcenter.ca">info@dozmi-revivalcenter.ca</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow text-secondary-container" style="font-size: 9px;">Service Times</div>
+        <ul class="mt-6 space-y-4 text-sm italic">
+          <li><strong class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest">Sunday</strong><br/>Worship — 6:30 PM</li>
+          <li><strong class="not-italic text-secondary-container font-label text-xs uppercase tracking-widest">Wednesday</strong><br/>Prayer — 6:30 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-secondary/15 text-center">
+      <p class="text-[10px] uppercase tracking-[0.35em] text-on-primary/40">© <span data-year></span> DOZMI The Revival Center · Sanctified Space · All rights reserved.</p>
+      <p class="mt-4 text-[9px] tracking-[0.2em] text-on-primary/30">Designed by <a href="https://www.orbanforest.ca/" class="hover:text-secondary-container transition-colors">Orban Forest Inc.</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
