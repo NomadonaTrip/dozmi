@@ -11,12 +11,16 @@
     var host = document.querySelector("[data-latest-sermon]");
     if (!host || typeof DOZMI_YT_FEED === "undefined") return;
 
+    /* Paint from cache immediately — see yt-feed.js for rationale. */
+    var cached = DOZMI_YT_FEED.getCached(1);
+    if (cached && cached.length) render(host, cached[0]);
+
     DOZMI_YT_FEED.fetchEntries(1)
       .then(function (entries) {
         if (entries.length) render(host, entries[0]);
       })
       .catch(function () {
-        /* All proxies failed — static fallback remains */
+        /* All proxies failed — cached or static fallback remains. */
       });
   }
 

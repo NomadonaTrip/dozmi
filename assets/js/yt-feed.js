@@ -4,6 +4,11 @@
    entries into a clean array of objects.
 
    Usage:
+     // Returning visitors: show cached data instantly.
+     var cached = DOZMI_YT_FEED.getCached(7);
+     if (cached) renderFromArray(cached);
+
+     // Fresh fetch — replaces cached render when it resolves.
      DOZMI_YT_FEED.fetchEntries(7).then(function(entries) { ... });
 
    Each entry: { title, videoId, published, author, url, thumbnail }
@@ -13,6 +18,7 @@ window.DOZMI_YT_FEED = (function () {
   var CHANNEL_ID = "UC1kh7UrdzbTBB_we3npIcJQ";
   var RSS_URL =
     "https://www.youtube.com/feeds/videos.xml?channel_id=" + CHANNEL_ID;
+  var CACHE_KEY = "dozmi_yt_feed_v1";
 
   var PROXIES = [
     {
@@ -39,6 +45,9 @@ window.DOZMI_YT_FEED = (function () {
      fetchEntries(max)
      Returns a Promise resolving to an array of up to `max` entry objects.
      Tries each CORS proxy in sequence; rejects if all fail.
+     On success, caches the full parsed feed in localStorage so returning
+     visitors see the last-known-good data instantly next time — and keep
+     seeing it if every proxy is down.
      ------------------------------------------------------------------ */
   function fetchEntries(max) {
     max = max || 7;
@@ -61,9 +70,10 @@ window.DOZMI_YT_FEED = (function () {
           })
           .then(function (xmlText) {
             if (!xmlText) throw new Error("Empty response");
-            var entries = parseAllEntries(xmlText, max);
+            var entries = parseAllEntries(xmlText);
             if (!entries.length) throw new Error("No entries found");
-            resolve(entries);
+            writeCache(entries);
+            resolve(entries.slice(0, max));
           })
           .catch(function () {
             tryProxy(idx + 1);
@@ -73,16 +83,52 @@ window.DOZMI_YT_FEED = (function () {
   }
 
   /* ------------------------------------------------------------------
-     parseAllEntries(xmlText, max)
+     getCached(max)
+     Synchronously returns up to `max` cached entries from localStorage,
+     or null if no cache exists or it's unreadable.
+     ------------------------------------------------------------------ */
+  function getCached(max) {
+    var entries = readCache();
+    if (!entries) return null;
+    return max ? entries.slice(0, max) : entries;
+  }
+
+  function readCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      if (!parsed || !Array.isArray(parsed.entries) || !parsed.entries.length) {
+        return null;
+      }
+      return parsed.entries;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function writeCache(entries) {
+    try {
+      localStorage.setItem(
+        CACHE_KEY,
+        JSON.stringify({ timestamp: Date.now(), entries: entries })
+      );
+    } catch (e) {
+      /* storage disabled, private mode, or quota exceeded — swallow */
+    }
+  }
+
+  /* ------------------------------------------------------------------
+     parseAllEntries(xmlText)
      Parses YouTube Atom XML into an array of entry objects.
      ------------------------------------------------------------------ */
-  function parseAllEntries(xmlText, max) {
+  function parseAllEntries(xmlText) {
     var parser = new DOMParser();
     var xml = parser.parseFromString(xmlText, "text/xml");
     var nodes = xml.querySelectorAll("entry");
     var entries = [];
 
-    for (var i = 0; i < nodes.length && i < max; i++) {
+    for (var i = 0; i < nodes.length; i++) {
       var node = nodes[i];
       var title = getText(node, "title");
       var videoId =
@@ -147,6 +193,7 @@ window.DOZMI_YT_FEED = (function () {
   /* Public API */
   return {
     fetchEntries: fetchEntries,
+    getCached: getCached,
     formatDate: formatDate,
     escapeHtml: escapeHtml,
   };

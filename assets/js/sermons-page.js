@@ -23,16 +23,26 @@
     /* Only run on pages that have the sermons grid */
     if (!document.querySelector("[data-sermons-grid]")) return;
 
+    /* Paint from cache immediately so returning visitors don't wait on the
+       network — and so they still see real content if every proxy is down. */
+    var cached = DOZMI_YT_FEED.getCached(7);
+    if (cached && cached.length) {
+      renderFeatured(cached[0]);
+      renderGrid(cached.slice(1, 7));
+    }
+
+    /* Filter handlers query cards at click time, so wire them once up front. */
+    initFilters();
+
+    /* Fresh fetch — replaces cached/static render when it resolves. */
     DOZMI_YT_FEED.fetchEntries(7)
       .then(function (entries) {
         if (!entries.length) return;
         renderFeatured(entries[0]);
         renderGrid(entries.slice(1, 7));
-        initFilters();
       })
       .catch(function () {
-        /* All proxies failed — static HTML remains */
-        initFilters(); /* still wire up filters for the static cards */
+        /* All proxies failed — cached or static HTML remains. */
       });
   }
 
