@@ -69,43 +69,49 @@
             <div class="eyebrow">Send a Message</div>
             <h2 class="section-title text-3xl md:text-4xl mt-6">We'd love to <span class="italic font-body font-normal lowercase text-secondary">hear from you</span></h2>
 
-            <form class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6" onsubmit="event.preventDefault(); alert('Thank you — your message has been received. We will respond shortly.');">
+            <div data-form-error role="alert" style="display: none;" class="mt-8 flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/10 text-primary px-5 py-4" tabindex="-1">
+              <span class="material-symbols-outlined text-xl leading-none mt-0.5">error_outline</span>
+              <div class="flex-1">
+                <p class="font-label font-bold uppercase tracking-[0.15em] text-xs">Message not sent</p>
+                <p class="italic text-sm mt-1 text-primary/80">Something got in the way. Please try again, or email <a href="mailto:info@dozmi-revivalcenter.ca" class="underline font-semibold">info@dozmi-revivalcenter.ca</a> directly.</p>
+              </div>
+            </div>
+            <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdzaWPeEVpuMkRRelaI0iBZPjvU5D0h8T4KhChla9mCsejKrg/formResponse" target="contact-form-sink" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
               <label class="block md:col-span-1">
                 <span class="eyebrow">Your Name</span>
-                <input type="text" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="First &amp; Last" />
+                <input type="text" name="entry.991149456" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="First &amp; Last" />
               </label>
               <label class="block md:col-span-1">
                 <span class="eyebrow">Email</span>
-                <input type="email" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="your@email.com" />
+                <input type="email" name="entry.1537366310" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="your@email.com" />
               </label>
               <label class="block md:col-span-1">
                 <span class="eyebrow">Phone</span>
-                <input type="tel" class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="+1 (___) ___-____" />
+                <input type="tel" name="entry.1718805911" class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="+1 (___) ___-____" />
               </label>
               <label class="block md:col-span-1">
                 <span class="eyebrow">I'm New</span>
-                <select class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors">
-                  <option>Yes, first time</option>
-                  <option>No, I've been before</option>
+                <select name="entry.796990317" class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors">
+                  <option value="Yes">Yes, first time</option>
+                  <option value="No">No, I've been before</option>
                 </select>
               </label>
               <label class="block md:col-span-2">
                 <span class="eyebrow">I Want To...</span>
-                <select class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors">
-                  <option>Select one...</option>
-                  <option>Know more about the revival center</option>
-                  <option>Be prayed for &amp; counselled with</option>
-                  <option>Volunteer for Kids Church</option>
-                  <option>Volunteer for a missions program</option>
-                  <option>Start a life group</option>
-                  <option>Join a life group</option>
-                  <option>Attend the Mothers' Prayer Summit</option>
-                  <option>Make a donation</option>
+                <select name="entry.672921396" class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors">
+                  <option value="">Select one...</option>
+                  <option value="Know more about the revival center">Know more about the revival center</option>
+                  <option value="Be prayed for and counselled with">Be prayed for &amp; counselled with</option>
+                  <option value="volunteer for kid's church">Volunteer for Kids Church</option>
+                  <option value="start a lifegroup">Start a life group</option>
+                  <option value="join a lifegroup">Join a life group</option>
+                  <option value="attend the mom's prayer summit">Attend the Mothers' Prayer Summit</option>
+                  <option value="make a donation">Make a donation</option>
                 </select>
               </label>
               <label class="block md:col-span-2">
                 <span class="eyebrow">Message</span>
-                <textarea rows="5" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Share what's on your heart..."></textarea>
+                <textarea rows="5" name="entry.1137417724" required class="mt-3 w-full bg-background border border-outline-variant/50 rounded-xl px-5 py-4 text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Share what's on your heart..."></textarea>
               </label>
               <div class="md:col-span-2">
                 <button type="submit" class="btn-regal">
@@ -114,6 +120,93 @@
                 </button>
               </div>
             </form>
+            <div data-form-success role="status" aria-live="polite" style="display: none;" class="text-center py-8" tabindex="-1">
+              <div class="w-24 h-24 mx-auto rounded-full bg-secondary-container/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-secondary-container" style="font-size: 56px;">check_circle</span>
+              </div>
+              <div class="eyebrow mt-8">Message Received</div>
+              <h3 class="section-title text-3xl md:text-4xl mt-5">Thank you — <span class="italic font-body font-normal lowercase text-secondary">we've heard you</span></h3>
+              <div class="divider-gold mx-auto mt-6"></div>
+              <p class="text-on-surface-variant italic mt-6 max-w-md mx-auto leading-relaxed">
+                Your message has landed safely. A member of our team will be in touch shortly. We're glad you reached out.
+              </p>
+              <button type="button" data-form-reset class="mt-8 inline-flex items-center gap-2 text-primary font-label font-bold uppercase tracking-[0.2em] text-[11px] hover:text-primary-container transition">
+                <span class="material-symbols-outlined text-base">edit</span>
+                Send another message
+              </button>
+            </div>
+            <iframe name="contact-form-sink" title="Contact form submission target" tabindex="-1" aria-hidden="true" style="position:absolute;width:1px;height:1px;left:-9999px;top:-9999px;border:0;"></iframe>
+            <script>
+              (function () {
+                var form = document.getElementById('contact-form');
+                if (!form) return;
+                var card = form.closest('.bg-surface-variant') || form.parentElement;
+                var successBlock = card.querySelector('[data-form-success]');
+                var errorBlock = card.querySelector('[data-form-error]');
+                var resetBtn = successBlock && successBlock.querySelector('[data-form-reset]');
+                var sink = document.querySelector('iframe[name="contact-form-sink"]');
+
+                function show(el) {
+                  if (!el) return;
+                  el.style.display = '';
+                  el.classList.remove('fade-up');
+                  void el.offsetWidth;
+                  el.classList.add('fade-up');
+                }
+                function hide(el) { if (el) el.style.display = 'none'; }
+
+                form.addEventListener('submit', function () {
+                  hide(errorBlock);
+                  var btn = form.querySelector('button[type="submit"]');
+                  var original = btn ? btn.innerHTML : '';
+                  if (btn) { btn.disabled = true; btn.innerHTML = 'Sending...'; }
+
+                  var topicField = form.querySelector('select[name="entry.672921396"]');
+                  var topicSavedName = null;
+                  if (topicField && topicField.value === '') {
+                    topicSavedName = topicField.name;
+                    topicField.removeAttribute('name');
+                    setTimeout(function () { topicField.setAttribute('name', topicSavedName); }, 0);
+                  }
+
+                  var done = false;
+                  function finish(success) {
+                    if (done) return;
+                    done = true;
+                    sink.removeEventListener('load', onLoad);
+                    clearTimeout(timeoutId);
+                    if (btn) { btn.disabled = false; btn.innerHTML = original; }
+                    if (success) {
+                      form.reset();
+                      hide(form);
+                      show(successBlock);
+                      if (successBlock && typeof successBlock.scrollIntoView === 'function') {
+                        successBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      }
+                      if (resetBtn) { setTimeout(function () { resetBtn.focus(); }, 400); }
+                    } else {
+                      show(errorBlock);
+                      if (errorBlock && typeof errorBlock.focus === 'function') { errorBlock.focus(); }
+                    }
+                  }
+                  function onLoad() { finish(true); }
+
+                  sink.addEventListener('load', onLoad);
+                  var timeoutId = setTimeout(function () { finish(false); }, 12000);
+                });
+
+                form.addEventListener('input', function () { hide(errorBlock); });
+
+                if (resetBtn) {
+                  resetBtn.addEventListener('click', function () {
+                    hide(successBlock);
+                    show(form);
+                    var firstField = form.querySelector('input, textarea, select');
+                    if (firstField) firstField.focus();
+                  });
+                }
+              })();
+            </script>
           </div>
         </div>
 
