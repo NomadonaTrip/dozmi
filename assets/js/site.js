@@ -111,7 +111,7 @@
 
   function defaultThumbById(id) {
     var map = {
-      "sunday-service": "assets/img/sunday_service.jpg",
+      "sunday-service": "assets/img/sunday_worship_service.jpeg",
       "midweek-prayer": "assets/img/prayer_meeting.jpg",
       "mothers-summit": "assets/img/mothers_prayer_meeting.jpg",
     };
