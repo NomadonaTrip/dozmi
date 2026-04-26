@@ -29,6 +29,7 @@
     if (cached && cached.length) {
       renderFeatured(cached[0]);
       renderGrid(cached.slice(1, 7));
+      injectVideoSchema(cached);
     }
 
     /* Filter handlers query cards at click time, so wire them once up front. */
@@ -40,10 +41,68 @@
         if (!entries.length) return;
         renderFeatured(entries[0]);
         renderGrid(entries.slice(1, 7));
+        injectVideoSchema(entries);
       })
       .catch(function () {
         /* All proxies failed — cached or static HTML remains. */
       });
+  }
+
+  /* ------------------------------------------------------------------
+     injectVideoSchema(entries)
+     Builds an ItemList of VideoObject schema from live YouTube entries
+     and writes it into <head>. Replaces any prior dynamic block so
+     schema always matches the rendered page (no stale titles, no
+     fabricated dates).
+     ------------------------------------------------------------------ */
+  function injectVideoSchema(entries) {
+    if (!entries || !entries.length) return;
+    var SCHEMA_ID = "dozmi-sermons-dynamic-schema";
+
+    var items = [];
+    for (var i = 0; i < entries.length; i++) {
+      var e = entries[i];
+      if (!e || !e.videoId) continue;
+      items.push({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": e.title,
+          "description":
+            (e.title || "Sermon") +
+            " — a sermon from DOZMI The Revival Center, a Pentecostal church in Mississauga, Ontario.",
+          "thumbnailUrl": e.thumbnail,
+          "uploadDate": e.published || undefined,
+          "contentUrl": e.url,
+          "embedUrl": "https://www.youtube.com/embed/" + e.videoId,
+          "publisher": { "@id": "https://dozmi-revivalcenter.ca/#organization" },
+          "creator": {
+            "@type": "Person",
+            "name": e.author || "Pastor Sanmi Adetukasi"
+          },
+          "inLanguage": "en"
+        }
+      });
+    }
+    if (!items.length) return;
+
+    var payload = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "@id": "https://dozmi-revivalcenter.ca/sermons.html#sermons-live",
+      "name": "Recent sermons from DOZMI The Revival Center, Mississauga",
+      "itemListElement": items
+    };
+
+    var existing = document.getElementById(SCHEMA_ID);
+    if (existing) existing.parentNode.removeChild(existing);
+
+    var script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = SCHEMA_ID;
+    script.textContent = JSON.stringify(payload);
+    document.head.appendChild(script);
   }
 
   /* ------------------------------------------------------------------

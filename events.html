@@ -3,13 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events &amp; Calendar · DOZMI The Revival Center</title>
-  <meta name="description" content="Full interactive event calendar for DOZMI The Revival Center — weekly worship, prayer meetings, monthly gatherings and special events in Mississauga." />
+  <title>Sunday Service &amp; Prayer Meeting in Mississauga · DOZMI</title>
+  <meta name="description" content="DOZMI Mississauga service times: Sunday worship 6:30 PM and Wednesday Prayer &amp; Encounter 6:30 PM at 1560 Dundas St W. View full event calendar." />
+  <meta name="keywords" content="Sunday evening service Mississauga, Sunday night church Mississauga, 6:30 PM church Mississauga, Wednesday prayer meeting Mississauga, midweek prayer GTA, HolyGhost Night Mississauga, church events calendar, prayer encounter meeting" />
+  <meta name="author" content="DOZMI The Revival Center" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#B08D57" />
+  <meta name="geo.region" content="CA-ON" />
+  <meta name="geo.placename" content="Mississauga, Ontario" />
+  <meta name="geo.position" content="43.5817;-79.6362" />
+  <meta name="ICBM" content="43.5817, -79.6362" />
+  <link rel="canonical" href="https://dozmi-revivalcenter.ca/events.html" />
+  <link rel="alternate" hreflang="en-ca" href="https://dozmi-revivalcenter.ca/events.html" />
   <link rel="icon" href="assets/img/dozmi-logo-favicon.jpg" />
+  <link rel="apple-touch-icon" href="assets/img/dozmi-logo-favicon.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="DOZMI The Revival Center" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:url" content="https://dozmi-revivalcenter.ca/events.html" />
+  <meta property="og:title" content="Sunday Service &amp; Prayer Meeting in Mississauga · DOZMI" />
+  <meta property="og:description" content="DOZMI Mississauga service times: Sunday worship 6:30 PM and Wednesday Prayer &amp; Encounter 6:30 PM at 1560 Dundas St W." />
+  <meta property="og:image" content="https://dozmi-revivalcenter.ca/assets/img/sunday_service.jpg" />
+  <meta property="og:image:alt" content="Sunday worship service at DOZMI The Revival Center, Mississauga" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sunday Service &amp; Prayer Meeting in Mississauga · DOZMI" />
+  <meta name="twitter:description" content="Sunday worship 6:30 PM &amp; Wednesday Prayer 6:30 PM at DOZMI The Revival Center, 1560 Dundas St W, Mississauga." />
+  <meta name="twitter:image" content="https://dozmi-revivalcenter.ca/assets/img/sunday_service.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script src="assets/js/tw-config.js"></script>
   <link rel="stylesheet" href="assets/css/regal.css" />
+
+  <!-- Structured data: EventsPage + recurring Event objects + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://dozmi-revivalcenter.ca/events.html#webpage",
+        "url": "https://dozmi-revivalcenter.ca/events.html",
+        "name": "Sunday Service & Prayer Meeting in Mississauga · DOZMI",
+        "description": "Service times and full event calendar for DOZMI The Revival Center, Mississauga — Sunday worship at 6:30 PM, Wednesday Prayer & Encounter at 6:30 PM, and quarterly HolyGhost Night gatherings.",
+        "isPartOf": {"@id": "https://dozmi-revivalcenter.ca/#website"},
+        "about": {"@id": "https://dozmi-revivalcenter.ca/#organization"},
+        "breadcrumb": {"@id": "https://dozmi-revivalcenter.ca/events.html#breadcrumb"},
+        "inLanguage": "en-CA"
+      },
+      {
+        "@type": "Event",
+        "@id": "https://dozmi-revivalcenter.ca/events.html#sunday-service",
+        "name": "Sunday Worship Service — DOZMI Mississauga",
+        "description": "Spirit-filled Sunday worship service at DOZMI The Revival Center: worship, the Word, ministry and community in Mississauga, ON.",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "byDay": "https://schema.org/Sunday",
+          "startTime": "18:30",
+          "endTime": "20:30",
+          "scheduleTimezone": "America/Toronto",
+          "repeatFrequency": "P1W"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "DOZMI The Revival Center (Erindale Presbyterian Church Building)",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1560 Dundas St W",
+            "addressLocality": "Mississauga",
+            "addressRegion": "ON",
+            "postalCode": "L5C 1E5",
+            "addressCountry": "CA"
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": 43.5817, "longitude": -79.6362}
+        },
+        "organizer": {"@id": "https://dozmi-revivalcenter.ca/#organization"},
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dozmi-revivalcenter.ca/events.html"
+        },
+        "image": "https://dozmi-revivalcenter.ca/assets/img/sunday_service.jpg",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "Event",
+        "@id": "https://dozmi-revivalcenter.ca/events.html#midweek-prayer",
+        "name": "Prayer & Encounter Meeting — DOZMI Mississauga",
+        "description": "Wednesday midweek prayer meeting in Mississauga: intercession, prophetic declarations, and breakthrough prayer at DOZMI The Revival Center.",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "byDay": "https://schema.org/Wednesday",
+          "startTime": "18:30",
+          "endTime": "20:30",
+          "scheduleTimezone": "America/Toronto",
+          "repeatFrequency": "P1W"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "DOZMI The Revival Center",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1560 Dundas St W",
+            "addressLocality": "Mississauga",
+            "addressRegion": "ON",
+            "postalCode": "L5C 1E5",
+            "addressCountry": "CA"
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": 43.5817, "longitude": -79.6362}
+        },
+        "organizer": {"@id": "https://dozmi-revivalcenter.ca/#organization"},
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dozmi-revivalcenter.ca/events.html"
+        },
+        "image": "https://dozmi-revivalcenter.ca/assets/img/prayer_meeting.jpg",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "Event",
+        "@id": "https://dozmi-revivalcenter.ca/events.html#holyghost-night-2026-05",
+        "name": "HolyGhost Night — DOZMI Mississauga",
+        "description": "A quarterly evening of Holy Spirit power and presence at DOZMI The Revival Center in Mississauga.",
+        "startDate": "2026-05-27T18:30:00-04:00",
+        "endDate": "2026-05-27T21:00:00-04:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "DOZMI The Revival Center",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1560 Dundas St W",
+            "addressLocality": "Mississauga",
+            "addressRegion": "ON",
+            "postalCode": "L5C 1E5",
+            "addressCountry": "CA"
+          }
+        },
+        "organizer": {"@id": "https://dozmi-revivalcenter.ca/#organization"},
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dozmi-revivalcenter.ca/events.html"
+        },
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://dozmi-revivalcenter.ca/events.html#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dozmi-revivalcenter.ca/"},
+          {"@type": "ListItem", "position": 2, "name": "Events", "item": "https://dozmi-revivalcenter.ca/events.html"}
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     /* full-size variant of the calendar */
     [data-calendar-size="full"] .cal-day { font-size: 15px; }

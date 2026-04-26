@@ -1,0 +1,53 @@
+# DOZMI The Revival Center — robots.txt
+# https://dozmi-revivalcenter.ca/
+
+User-agent: *
+Allow: /
+Disallow: /assets/js/
+Disallow: /*.json$
+
+# Independent / alternative search indexes — explicitly welcomed.
+# Brave Search (Bravebot) runs its own ~30B page index, separate from
+# Google and Bing. DuckDuckGo (DuckDuckBot) crawls for instant answers
+# and links (most DDG web results come from Bing). Mojeek runs its own
+# independent index. Yandex serves Slavic-language traffic.
+User-agent: Bravebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: MojeekBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# AI / generative-engine crawlers — explicitly allow so the site can be
+# cited by ChatGPT, Perplexity, Google AI Overviews, Claude, and Apple
+# Intelligence / Siri.
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://dozmi-revivalcenter.ca/sitemap.xml
