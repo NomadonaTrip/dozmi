@@ -41,6 +41,24 @@ window.DOZMI_EVENTS = {
         "2027-12-29",
       ],
     },
+    {
+      id: "foundations-course",
+      title: "Foundations Course",
+      cadence: "weekly",
+      weekday: 5, // Friday
+      // Runs every Friday through August and September 2026.
+      startDate: "2026-08-07",
+      endDate: "2026-09-25",
+      time: "7:00 PM – 8:15 PM",
+      location: "1560 Dundas St W, Mississauga",
+      description:
+        "An eight-week class grounding you in the foundations of the faith — salvation, the Word, prayer, the Holy Spirit and life in the local church. Registration required.",
+      category: "training",
+      image:
+        "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=900&q=80",
+      registerUrl:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfXvPocH-bgi9CmrHa3nawiUgSRmgeSMz8ig70xMCvR7EILHQ/viewform?usp=publish-editor",
+    },
   ],
   single: [
     {
@@ -223,6 +241,8 @@ window.expandEventsForMonth = function (year, month /* 0-indexed */) {
         if (dt.getDay() === rec.weekday) {
           const iso = fmtISO(dt);
           if (rec.exceptions && rec.exceptions.includes(iso)) continue;
+          if (rec.startDate && iso < rec.startDate) continue;
+          if (rec.endDate && iso > rec.endDate) continue;
           addEvent(iso, rec);
         }
       }

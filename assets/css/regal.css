@@ -439,6 +439,18 @@ body {
   color: var(--on-surface-variant);
   margin-top: 2px;
 }
+.cal-event-link {
+  display: inline-flex; align-items: center; gap: .25rem;
+  margin-top: .4rem;
+  font-family: 'Work Sans', system-ui, sans-serif;
+  font-size: 10px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--secondary);
+  transition: color .2s;
+}
+.cal-event-link .material-symbols-outlined { font-size: 14px; }
+.cal-event-link:hover { color: var(--primary); }
+
 .cal-empty {
   padding: 1rem 0;
   font-size: 13px;

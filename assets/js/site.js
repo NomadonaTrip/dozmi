@@ -101,6 +101,9 @@
                   <span class="material-symbols-outlined text-base">location_on</span>
                   <span>${escape(ev.location)}</span>
                 </div>
+                ${ev.registerUrl
+                  ? `<a href="${escape(ev.registerUrl)}" target="_blank" rel="noopener" class="btn-gold mt-6">Register<span class="material-symbols-outlined text-base">arrow_right_alt</span></a>`
+                  : ""}
               </div>
             </article>
           `;

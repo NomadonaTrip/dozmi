@@ -138,6 +138,9 @@
             <div class="cal-event-meta" style="flex: 1;">
               <h4>${escapeHtml(ev.title)}</h4>
               <p>${escapeHtml(ev.time)} · ${escapeHtml(ev.location)}</p>
+              ${ev.registerUrl
+                ? `<a class="cal-event-link" href="${escapeHtml(ev.registerUrl)}" target="_blank" rel="noopener">Register<span class="material-symbols-outlined">arrow_right_alt</span></a>`
+                : ""}
             </div>
           </div>
         `
